@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="burp-garak:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/burp_garak_jar</output-path>
+    <root id="archive" name="burp-garak.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="burp-garak" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/portswigger/burp/extensions/montoya-api/2024.12/montoya-api-2024.12.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
