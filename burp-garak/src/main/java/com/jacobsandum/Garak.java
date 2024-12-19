@@ -36,23 +36,6 @@ public class Garak {
 
     private void generateGarakRestJSON() {
         garakExtension.api.logging().logToOutput("Creating JSON test");
-        //{
-        //   "rest": {
-        //      "RestGenerator": {
-        //         "name": "example service",
-        //         "uri": "https://example.ai/llm",
-        //         "method": "post",
-        //         "headers": {
-        //            "X-Authorization": "$KEY"
-        //         },
-        //         "req_template_json_object": {
-        //            "text": "$INPUT"
-        //         },
-        //         "response_json": true,
-        //         "response_json_field": "text"
-        //      }
-        //   }
-        //}
 
         JSONObject garakJson = new JSONObject();
 
@@ -62,7 +45,6 @@ public class Garak {
         restgen.put("method", request.method());
         JSONObject headersJSON = new JSONObject();
         for (int i = 0; i < request.headers().size(); i++) {
-//            garakExtension.api.logging().logToOutput(request.headers().get(i).toString());
             headersJSON.put(request.headers().get(i).name(), request.headers().get(i).value());
         }
         restgen.put("headers", headersJSON);
