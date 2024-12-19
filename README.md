@@ -15,6 +15,9 @@ In intercepted requests and repeater, there will be a context menu under extensi
 You can use this context menu to send request-responses to the Garak extension tab in Burpsuite.
 In the Garak extension tab, you can then export a garak.json file using the request-response you added.
 
+### Dependencies
+org.json:json
+
 ## TODO
 - Improve UI 
   - Intruder-esque selection of relevant JSON field for Garak in request and response
