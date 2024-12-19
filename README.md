@@ -5,3 +5,9 @@ This version currently only generates the garak.json file from a Burpsuite reque
 
 ## How it works
 Uses the Garak REST Generator: https://reference.garak.ai/en/latest/garak.generators.rest.html
+
+## TODO
+- Improve UI
+- - Intruder-esque selection of relevant JSON field for Garak in request and response
+- Run Garak from Burp
+- Show Garak output in Burp
