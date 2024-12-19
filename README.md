@@ -1,9 +1,11 @@
 # burp-garak
-Burpsuite Extension that lets you test LLMs over REST via Garak in the Burp UI.
+Burpsuite Extension that lets you test LLMs with the Garak REST generator using the Burp UI
 
 This version currently only generates the garak.json file from a Burpsuite request and response that can be used with the REST generator in Garak.
 
 ## How it works
+Uses the Burpsuite Montoya API to extend Burpsuite.
+
 Uses the Garak REST Generator: https://reference.garak.ai/en/latest/garak.generators.rest.html
 
 ## Usage
