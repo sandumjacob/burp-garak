@@ -36,7 +36,7 @@ public class GarakContextMenuItemsProvider implements ContextMenuItemsProvider {
 
             retrieveRequestItem.addActionListener(l -> {
                 api.logging().logToOutput("Sending request to Garak:\r\n" + requestResponse.request().toString());
-                garak.updateGarakRequestResponse(requestResponse.request());
+                garak.updateGarakRequestResponse(requestResponse.request(), requestResponse.response());
 
             });
             menuItemList.add(retrieveRequestItem);
