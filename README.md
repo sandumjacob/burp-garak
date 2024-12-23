@@ -33,3 +33,5 @@ burp-garak
 burp-garak/pom.xml
 ```
 
+Used JDK 22
+
