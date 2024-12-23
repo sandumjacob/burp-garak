@@ -40,7 +40,7 @@ public class Garak {
         JSONObject garakJson = new JSONObject();
 
         JSONObject restgen = new JSONObject();
-        restgen.put("name", "idk name");
+        restgen.put("name", "Burpsuite Garak Generator");
         restgen.put("uri", request.url());
         restgen.put("method", request.method());
         JSONObject headersJSON = new JSONObject();
@@ -48,14 +48,16 @@ public class Garak {
             headersJSON.put(request.headers().get(i).name(), request.headers().get(i).value());
         }
         restgen.put("headers", headersJSON);
-        restgen.put("req_template_json_object", new JSONObject("{\"text\": \"test\"}"));
+        restgen.put("req_template_json_object", new JSONObject(garakExtension.garakSuiteTab.garakRequestJSONTextField.getText()));
         restgen.put("response_json", true);
-        restgen.put("response_json_field", "test");
+        restgen.put("response_json_field", garakExtension.garakSuiteTab.garakResponseJSONTextField.getText());
 
         garakJson.put("rest", restgen);
 
+        String exportPath = garakExtension.garak.garakPath + "/garak.json";
+
         try {
-            FileWriter myWriter = new FileWriter("/tmp/garak.json");
+            FileWriter myWriter = new FileWriter(exportPath);
             myWriter.write(garakJson.toString());
             myWriter.close();
         } catch (Exception e) {
@@ -63,7 +65,7 @@ public class Garak {
         }
 
         garakExtension.api.logging().logToOutput(garakJson.toString());
-        garakExtension.api.logging().logToOutput("Created JSON file for garak at /tmp/garak.json");
+        garakExtension.api.logging().logToOutput(String.format("Created Garak JSON file at %s", exportPath));
     }
 
     public void startScan() {
@@ -80,7 +82,7 @@ public class Garak {
     }
 
     public static void main(String[] args) {
-
+        System.out.println("Running Main!");
     }
 
 }

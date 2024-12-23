@@ -15,6 +15,6 @@ public class GarakUnloadingHandler implements ExtensionUnloadingHandler
     @Override
     public void extensionUnloaded()
     {
-        api.logging().logToOutput("Extension has been unloaded.");
+        api.logging().logToOutput("Burpsuite Garak extension has been unloaded.");
     }
 }

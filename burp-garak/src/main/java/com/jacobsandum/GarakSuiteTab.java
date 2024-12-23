@@ -44,7 +44,8 @@ public class GarakSuiteTab extends JComponent
 
     public HttpRequestEditor garakSuiteTabRequestEditor;
     public HttpResponseEditor garakSuiteTabResponseEditor;
-
+    public JTextField garakRequestJSONTextField;
+    public JTextField garakResponseJSONTextField;
 
     public GarakSuiteTab(MontoyaApi api, Garak garak)
     {
@@ -62,15 +63,12 @@ public class GarakSuiteTab extends JComponent
 
         JTextField garakPathTextField = new JTextField(32);
 
-        if (garak.garakPath.isEmpty()) {
-            garakPathTextField.setText("Enter Path to Export JSON");
+        if (garak.garakPath == null || garak.garakPath.isEmpty()) {
+            garakPathTextField.setText("Enter Path for Output JSON");
         } else {
             garakPathTextField.setText(garak.garakPath);
         }
         optionsContent.add(garakPathTextField);
-
-        JTextField garakOutputTextField = new JTextField(32);
-        optionsContent.add(garakOutputTextField);
 
         JButton saveGarakPathButton = new JButton("Save");
         saveGarakPathButton.addActionListener(e -> {
@@ -91,6 +89,14 @@ public class GarakSuiteTab extends JComponent
         HttpResponseEditor garakResponseEditor  = api.userInterface().createHttpResponseEditor();
         garakSuiteTabResponseEditor = garakResponseEditor;
         // editorContents.add(garakSuiteTabRequestEditor.uiComponent());
+
+        garakRequestJSONTextField = new JTextField(32);
+        garakRequestJSONTextField.setText("Request JSON");
+        editorControls.add(garakRequestJSONTextField);
+
+        garakResponseJSONTextField = new JTextField(32);
+        garakResponseJSONTextField.setText("Response JSON");
+        editorControls.add(garakResponseJSONTextField);
 
         JButton startGarakButton = new JButton("Export Garak JSON");
         startGarakButton.addActionListener(e -> {
