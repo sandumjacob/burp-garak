@@ -16,7 +16,8 @@ on:
   pull_request:
     branches: [ "main" ]
     paths:
-      - burp-garak
+      - '**.java'
+      - '**.xml'
 
 jobs:
   build:
