@@ -90,6 +90,7 @@ public class GarakSuiteTab extends JComponent
         garakSuiteTabResponseEditor = garakResponseEditor;
         // editorContents.add(garakSuiteTabRequestEditor.uiComponent());
 
+        // TODO: Better UI for JSON
         garakRequestJSONTextField = new JTextField(32);
         garakRequestJSONTextField.setText("Request JSON");
         editorControls.add(garakRequestJSONTextField);

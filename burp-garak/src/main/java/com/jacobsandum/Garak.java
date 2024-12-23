@@ -35,8 +35,6 @@ public class Garak {
     }
 
     private void generateGarakRestJSON() {
-        garakExtension.api.logging().logToOutput("Creating JSON test");
-
         JSONObject garakJson = new JSONObject();
 
         JSONObject restgen = new JSONObject();
@@ -47,6 +45,7 @@ public class Garak {
         for (int i = 0; i < request.headers().size(); i++) {
             headersJSON.put(request.headers().get(i).name(), request.headers().get(i).value());
         }
+        // TODO: JSON validation of text fields
         restgen.put("headers", headersJSON);
         restgen.put("req_template_json_object", new JSONObject(garakExtension.garakSuiteTab.garakRequestJSONTextField.getText()));
         restgen.put("response_json", true);
@@ -54,6 +53,7 @@ public class Garak {
 
         garakJson.put("rest", restgen);
 
+        // TODO: Path validation
         String exportPath = garakExtension.garak.garakPath + "/garak.json";
 
         try {
