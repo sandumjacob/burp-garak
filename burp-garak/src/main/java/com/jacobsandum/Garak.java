@@ -65,7 +65,7 @@ public class Garak {
         }
 
         garakExtension.api.logging().logToOutput(garakJson.toString());
-        garakExtension.api.logging().logToOutput(String.format("Created Garak JSON file at %s", exportPath));
+        garakExtension.api.logging().logToOutput(String.format("Created Garak JSON file garak.json at %s", exportPath));
     }
 
     public void startScan() {
