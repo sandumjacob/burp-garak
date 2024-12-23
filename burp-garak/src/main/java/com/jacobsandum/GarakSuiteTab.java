@@ -79,7 +79,6 @@ public class GarakSuiteTab extends JComponent
 
         optionsContent.add(saveGarakPathButton);
 
-
         // Editor Controls UI
         JPanel editorControls = new JPanel();
 

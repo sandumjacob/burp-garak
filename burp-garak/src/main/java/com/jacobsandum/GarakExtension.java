@@ -64,6 +64,6 @@ public class GarakExtension implements BurpExtension
     }
 
     public static void main(String[] args) {
-        System.out.println("Running");
+        System.out.println("Running Extension");
     }
 }
