@@ -11,8 +11,12 @@ name: Java CI with Maven
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - "burp-garak/"
   pull_request:
     branches: [ "main" ]
+    paths:
+      - "burp-garak/"
 
 jobs:
   build:
