@@ -20,6 +20,9 @@ You can use this context menu to send request-responses to the Garak extension t
 In the Garak extension tab, you can then export a garak.json file using the request-response you added.
 ![image](https://github.com/user-attachments/assets/d9c9f90c-f9c7-4325-b6f2-8868036a865e)
 
+```shell
+garak --model_type rest -G garak.json 
+```
 
 
 ### Dependencies
@@ -35,6 +38,7 @@ org.json:json
 
 ## Building
 The Java project is in
+
 ```
 burp-garak
 burp-garak/pom.xml
