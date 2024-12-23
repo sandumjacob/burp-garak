@@ -13,7 +13,12 @@ Load the extension into Burpsuite with the built JAR file. You also need to add 
 
 In intercepted requests and repeater, there will be a context menu under extensions.
 You can use this context menu to send request-responses to the Garak extension tab in Burpsuite.
+
+![Screenshot_20241223_095406](https://github.com/user-attachments/assets/748c658a-d0e9-4f94-98e7-6583dd1da6df)
+
+
 In the Garak extension tab, you can then export a garak.json file using the request-response you added.
+
 
 ### Dependencies
 org.json:json
