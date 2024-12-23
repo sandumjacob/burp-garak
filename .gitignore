@@ -3,6 +3,7 @@
 /burp-garak/target/*
 /target/
 
+
 # Compiled class file
 *.class
 
