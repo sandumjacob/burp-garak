@@ -24,6 +24,7 @@ In the Garak extension tab, you can then export a garak.json file using the requ
 garak --model_type rest -G garak.json 
 ```
 
+Builds are in the actions tab. Import the built Jar into Burp Extender
 
 ### Dependencies
 org.json:json
